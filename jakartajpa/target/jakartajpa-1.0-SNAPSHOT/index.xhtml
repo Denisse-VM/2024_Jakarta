@@ -18,7 +18,11 @@
         <h:inputText id="firstName"
                     label="First Name"
                     value="#{student.firstName}"
-                    required="true">            
+                    required="true">
+                    validator="#{alphaValidator.validateAlpha}">
+                    <!-- 
+                    <f:validateLength minimum="2" maximum="30"/>   
+                    -->
         </h:inputText>
         <h:outputLabel for="lastName" value="Last Name:">
         </h:outputLabel>
@@ -26,12 +30,20 @@
                      label="Last Name"
                      value="#{student.lastName}"
                      required="true">
+            <!-- 
+                        validator="#{alphaValidator.validateAlpha}">
+                        <f:validateLength minimum="2" maximum="30"/>
+            -->
         </h:inputText>
         <h:outputLabel for="email" value="Email:">
         </h:outputLabel>
         <h:inputText id="email"
           label="Email"
           value="#{student.email}">
+            <!--
+            <f:validateLength minimum="3" maximum="30"/>
+            <f:validator validatorId="emailValidator" />
+            -->
         </h:inputText>
         <h:panelGroup></h:panelGroup>
         <h:commandButton action="information" value="Save">

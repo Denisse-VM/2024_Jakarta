@@ -1,3 +1,4 @@
+com\itspa\jakartajpa\validations\AlphaValidator.class
 com\itspa\jakartajpa\JakartaRestConfiguration.class
 com\itspa\jakartajpa\bean\Student.class
 com\itspa\jakartajpa\resources\JakartaEE8Resource.class
