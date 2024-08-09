@@ -1,5 +1,7 @@
 C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\resources\JakartaEE8Resource.java
 C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\validations\AlphaValidator.java
 C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\validations\EmailAddressValidator.java
+C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\entity\Student.java
 C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\JakartaRestConfiguration.java
-C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\bean\Student.java
+C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\bean\StudentBean.java
+C:\2024_Jakarta\jakartajpa\src\main\java\com\itspa\jakartajpa\controller\StudentController.java

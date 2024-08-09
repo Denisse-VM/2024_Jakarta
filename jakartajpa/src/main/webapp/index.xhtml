@@ -10,9 +10,16 @@
     <h:body>
         <h1>ITESS-ITSPA JPA</h1> 
         
+        <h2>Get Student List</h2>
+        <h:form id="studentFormList">
+            <h:commandLink value="Get Student List" 
+                           action="#{studentController.getStudents()}"/>
+        </h:form> 
+        
+        <h2>Add Student Form</h2>
         <h:form id="studentForm">
-      <h:messages/> <!--Envía los mensajes de error>-->
-      <h:panelGrid columns="2"
+        <h:messages/> <!--Envía los mensajes de error>-->
+        <h:panelGrid columns="2"
         columnClasses="rightAlign,leftAlign">
         <h:outputLabel for="firstName" 
                        value="First Name:">
@@ -20,7 +27,7 @@
         <h:inputText id="firstName"
                     label="First Name"
                     pt:placeholder="Write your first name here"
-                    value="#{student.firstName}"
+                    value="#{studentController.student.firstName}"
                     required="true">
                     validator="#{alphaValidator.validateAlpha}">
                     <f:validateLength minimum="2" maximum="30"/>                     
@@ -30,7 +37,7 @@
         <h:inputText id="lastName"
                      label="Last Name"
                      pt:placeholder="Write your last name here"
-                     value="#{student.lastName}"
+                     value="#{studentController.student.lastName}"
                      required="true">
                         validator="#{alphaValidator.validateAlpha}">                   
                         <f:validateLength minimum="2" maximum="30"/>
@@ -40,12 +47,15 @@
         <h:inputText id="email"
           label="Email"
           pt:placeholder="Write your email here"
-          value="#{student.email}">
+          value="#{studentController.student.email}">
             <f:validateLength minimum="3" maximum="30"/>
             <f:validator validatorId="emailValidator" />
         </h:inputText>
         <h:panelGroup></h:panelGroup>
+        <!-- 
         <h:commandButton action="information" value="Save">
+        -->
+        <h:commandButton action="#{studentController.saveStudent()}" value="Save">
         </h:commandButton>
       </h:panelGrid>
     </h:form>
